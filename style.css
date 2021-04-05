@@ -1,0 +1,128 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.body__container {
+	width: 100vw;
+	height: 100vh;
+	background: url("img/home-bg.png") no-repeat top / cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin: 0;
+}
+
+.btn {
+	width: 250px;
+	height: 50px;
+	font-size: 25px;
+	position: absolute;
+	bottom: 160px;
+	margin-right: auto;
+	margin-left: auto;
+	cursor: pointer;
+	border-radius: 10px;
+	box-shadow: 3px 3px 2px 1px darkgray;
+}
+
+.card__container {
+	width: 100vw;
+	height: 100vh;
+	background: url("img/card-bg.png") no-repeat top / cover;
+	z-index: 1;
+	display: none;
+  position: relative;
+}
+
+.card__container.show {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+	background-color: #fad586;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 400px;
+	height: 550px;
+	margin: auto;
+	border-radius: 10px;
+	box-shadow: 3px 3px 2px 1px darkgray;
+}
+
+.card__innerline {
+	border: solid 2px goldenrod;
+	width: 95%;
+	height: 95%;
+	display: flex;
+  flex-direction: column;
+	justify-content: space-between;
+  padding: 10px;
+	align-items: center;
+	border-radius: 10px;
+}
+
+#avatar {
+  width: 100%;
+  height: 60%;
+  background-color: whitesmoke;
+  border: dashed 1px darkgrey;
+}
+
+#btn-back {
+  position: absolute;
+  bottom: 50px;
+  font-size: 18px;
+  cursor: pointer;
+  color: salmon;
+}
+
+.description__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px 10px;
+  width: 80%;
+  height: 40%;
+  font-size: 20px;
+}
+
+.char__size {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.char__size-height {
+  margin-right: 10px;
+}
+
+.char__size-weight {
+  margin-left: 10px;
+}
+
+.char__size-height,
+.char__size-weight {
+  font-size: 15px;
+}
+
+#char__name,
+#char__ability,
+#char__height,
+#char__weight {
+  font-weight: 700;
+  color: #c64756;
+  margin-left: 10px;
+}
+
+
+
+

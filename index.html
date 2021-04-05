@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<script
+			src="https://kit.fontawesome.com/bce1a98f73.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Pokemon Card</title>
+	</head>
+	<body>
+		<div class="body__container">
+			<button class="btn">Pick</button>
+			<div class="card__container">
+				<div class="card">
+					<div class="card__innerline">
+						<img src="img/pokeball.png" alt="" id="avatar" width="300px" />
+						<div class="description__container">
+							<div class="char__name-title">
+								Name: <span id="char__name"></span>
+							</div>
+							<div class="char__ability-title">
+								Ability: <span id="char__ability"></span>
+							</div>
+							<div class="char__size">
+								<div class="char__size-height">
+									Height: <span id="char__height"></span>
+								</div>
+								<div class="char__size-weight">
+									Weight: <span id="char__weight"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button id="btn-back"><i class="fas fa-angle-double-left"></i> Back</button>
+			</div>
+		</div>
+		<script src="main.js"></script>
+	</body>
+</html>
