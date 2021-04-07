@@ -21,6 +21,7 @@ body {
 
 .logo__container img {
 	width: 20%;
+	height: auto;
 	transition: 0.2s ease;
 }
 
