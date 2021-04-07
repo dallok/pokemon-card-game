@@ -1,16 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
 * {
 	box-sizing: border-box;
 }
 
 body {
 	margin: 0;
-  font-family: 'Roboto', sans-serif;
+	background: url("img/card-bg.png") no-repeat top / cover;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+}
+
+.logo__container {
+	display: flex;
+	justify-content: center;
+	width: 60%;
+	margin-bottom: 40px;
+}
+
+.logo__container img {
+	width: 20%;
+	transition: 0.2s ease;
+}
+
+.logo__container img:active,
+.logo__container img:hover {
+	transform: scale(0.9);
+}
+
+.logo__container img:nth-child(1),
+.logo__container img:nth-child(2) {
+	margin-right: 5px;
 }
 
 .body__container {
+	font-family: "VT323", monospace;
 	width: 100vw;
 	height: 100vh;
-	background: url("img/home-bg.png") no-repeat top / cover;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -19,110 +46,127 @@ body {
 	margin: 0;
 }
 
-.btn {
-	width: 250px;
-	height: 50px;
-	font-size: 25px;
-	position: absolute;
-	bottom: 160px;
-	margin-right: auto;
-	margin-left: auto;
-	cursor: pointer;
-	border-radius: 10px;
-	box-shadow: 3px 3px 2px 1px darkgray;
+.body__container h1 {
+	color: white;
+	font-weight: heavy;
+	margin-bottom: 10px;
+}
+
+.body__container p {
+	color: pink;
+	margin-bottom: 50px;
+}
+
+.body__container button {
+	padding: 0px 50px;
+	font-size: 30px;
 }
 
 .card__container {
-	width: 100vw;
-	height: 100vh;
-	background: url("img/card-bg.png") no-repeat top / cover;
-	z-index: 1;
-	display: none;
-  position: relative;
-}
-
-.card__container.show {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	position: absolute;
+	top: 30px;
+	width: 85%;
+	max-width: 350px;
+	max-height: 100%;
 }
 
-.card {
+.carousel-item .card {
 	background-color: #fad586;
+	padding: 10px 10px;
+}
+
+.carousel-item .card .card__innerline {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 400px;
-	height: 550px;
-	margin: auto;
-	border-radius: 10px;
-	box-shadow: 3px 3px 2px 1px darkgray;
-}
-
-.card__innerline {
+	padding: 5px 0;
 	border: solid 2px goldenrod;
+}
+
+.carousel-item .card .card__innerline img {
+	width: 80%;
+	padding: 10px 10px;
+}
+
+.img__container {
+	background-color: whitesmoke;
 	width: 95%;
-	height: 95%;
-	display: flex;
-  flex-direction: column;
-	justify-content: space-between;
-  padding: 10px;
-	align-items: center;
-	border-radius: 10px;
-}
-
-#avatar {
-  width: 100%;
-  height: 60%;
-  background-color: whitesmoke;
-  border: dashed 1px darkgrey;
-}
-
-#btn-back {
-  position: absolute;
-  bottom: 50px;
-  font-size: 18px;
-  cursor: pointer;
-  color: salmon;
+	border-radius: 5%;
+	text-align: center;
 }
 
 .description__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 20px 10px;
-  width: 80%;
-  height: 40%;
-  font-size: 20px;
+	width: 100%;
+	padding: 0 25px;
+	margin-top: 10px;
+	font-family: "VT323", monospace;
+	font-size: 1.3em;
+	color: navy;
 }
 
-.char__size {
-  display: flex;
-  justify-content: space-evenly;
+.description__container .char__size {
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 5px;
+	font-size: 1em;
 }
 
-.char__size-height {
-  margin-right: 10px;
+.btn__container {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
 }
 
-.char__size-weight {
-  margin-left: 10px;
+.card__collection {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	margin-top: 30px;
+	margin-bottom: 20px;
 }
 
-.char__size-height,
-.char__size-weight {
-  font-size: 15px;
+.card__collection .card {
+	width: 28%;
+	padding: 20px 0;
+	background-color: #bca370;
 }
 
-#char__name,
-#char__ability,
-#char__height,
-#char__weight {
-  font-weight: 700;
-  color: #c64756;
-  margin-left: 10px;
+.card__collection .card:hover {
+	transform: scale(1.1);
+	transition: transform 0.2s ease-in-out;
 }
 
+.card__collection .card img {
+	width: 60%;
+	margin: 8px auto;
+}
 
+.carousel-control-next-icon {
+	background-color: gray;
+	border-radius: 5px;
+	opacity: 0;
+}
 
+.carousel-control-next-icon:hover {
+	opacity: 1;
+}
 
+@media (min-width: 576px) {
+	.card__container {
+		top: 20%;
+		bottom: 20%;
+	}
+}
+
+@media (min-height: 700px) {
+	.btn__container {
+		margin: 30px 0;
+	}
+	.card__collection {
+		margin-top: 50px;
+	}
+}
