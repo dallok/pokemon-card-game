@@ -8,6 +8,7 @@ body {
 	margin: 0;
 	background: url("img/card-bg.png") no-repeat top / cover;
 	width: 100vw;
+	height: 100vh;
 	display: flex;
 	justify-content: center;
 }
@@ -16,6 +17,7 @@ body {
 	display: flex;
 	justify-content: center;
 	width: 60%;
+	height: auto;
 	margin-bottom: 40px;
 }
 
@@ -23,16 +25,29 @@ body {
 	width: 20%;
 	height: auto;
 	transition: 0.2s ease;
+	align-self: flex-end;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	transform-origin: bottom;
+	animation-name: bounce-4;
+	animation-timing-function: ease;
 }
-
-.logo__container img:active,
-.logo__container img:hover {
-	transform: scale(0.9);
-}
-
-.logo__container img:nth-child(1),
-.logo__container img:nth-child(2) {
-	margin-right: 5px;
+@keyframes bounce-4 {
+	0% {
+		transform: scale(1, 1) translateY(0);
+	}
+	10% {
+		transform: scale(1.1, 0.9) translateY(0);
+	}
+	30% {
+		transform: scale(0.9, 1.1) translateY(-100px);
+	}
+	50% {
+		transform: scale(1, 1) translateY(0);
+	}
+	100% {
+		transform: scale(1, 1) translateY(0);
+	}
 }
 
 .body__container {
@@ -71,7 +86,6 @@ body {
 	top: 30px;
 	width: 85%;
 	max-width: 350px;
-	max-height: 100%;
 }
 
 .carousel-item .card {
@@ -96,6 +110,7 @@ body {
 .img__container {
 	background-color: whitesmoke;
 	width: 95%;
+	max-height: 60%;
 	border-radius: 5%;
 	text-align: center;
 }
@@ -107,6 +122,10 @@ body {
 	font-family: "VT323", monospace;
 	font-size: 1.3em;
 	color: navy;
+}
+
+.description__container h1 {
+	margin: 30px;
 }
 
 .description__container .char__size {
@@ -169,5 +188,10 @@ body {
 	}
 	.card__collection {
 		margin-top: 50px;
+	}
+
+	.logo__container img {
+		width: 15%;
+		height: auto;
 	}
 }
