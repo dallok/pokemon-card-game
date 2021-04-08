@@ -127,7 +127,7 @@ addBtn.addEventListener("click", e => {
 				<img src="img/pokeball.png" alt="" id="avatar" />
 			</div>
 			<div class="description__container">
-				<h1> You already have picked 3 cards. </h1>
+				<h1>You already have picked 3 cards.</h1>
 			</div>
 		</div>`;
 	} else {
@@ -138,6 +138,6 @@ addBtn.addEventListener("click", e => {
 cardCollections.forEach(button => {
 	button.addEventListener("click", e => {
 		const cardId = e.target.dataset.id;
-		paintCard(cards[cardId], card)
+		paintCard(cards[cardId], card);
 	});
 });
